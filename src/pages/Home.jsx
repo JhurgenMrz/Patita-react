@@ -11,6 +11,7 @@ const Home = () => (
                         <div className="Pets-type">
                             Adopción
                         </div>
+                    </div>
                         <div className="Pets-content">
                             <div className="Pets-head">
                                 <h2>Nombre de mi mascota</h2>
@@ -22,7 +23,6 @@ const Home = () => (
                             </div>
 
                         </div>
-                    </div>
                 </div>
 
             </div>
