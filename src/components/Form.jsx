@@ -66,9 +66,7 @@ const Form = () => {
             />
 
           <select name="type">
-            <option disabled selected>
-              Seleccionar
-            </option>
+            <option disabled selected>Seleccionar</option>
             <option value="cat">Gato</option>
             <option value="dog">Perro</option>
           </select>
