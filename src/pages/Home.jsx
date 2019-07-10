@@ -16,11 +16,11 @@ const Home = () => {
       <div className="Home-container">
         <div className="Home-items">
           {pets.map( (pet, index) => (
-            <Link to={{
+            <Link key={`pet-${index}`} to={{
               pathname: `/mascotas/${index}-${pet.name}`,
               state: { ...pet}
-            }}>
-            <PetItem pet={pet} key={`pet-${index}`} />
+            }} className="none">
+            <PetItem pet={pet}  />
             </Link>
          
         ))}

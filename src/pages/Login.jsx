@@ -1,25 +1,22 @@
 import React from 'react'
 import { connect} from 'react-redux'
 import {auth, provider} from '../utils/firebase'
-import {setUser} from '../actions/index'
+import {setUser, setLogin} from '../actions/'
 
 const Login =( props ) => {
 
     const loginFacebook =()=>{
+        console.log('Entro!')
         auth().signInWithPopup(provider)
             .then(({user}) => {
+                console.log('Entro 2');
                 props.setUser(user);
+                props.setLogin(true);
                 props.history.push('/panel');
             });
     }
 
-    const logoutFacebook = ()=>{
-        auth().signOut()
-            .then(()=>{
-                // console.log(`Cerrar sesión`);
-                props.history.push('/')
-            })
-    }
+    
 
     return (
         <div className="Login">
@@ -28,11 +25,9 @@ const Login =( props ) => {
             <h2>Crear cuenta o Iniciar Sesión</h2>
             <button onClick={loginFacebook}>
                 <i className="fab fa-facebook-square" />
-                <span>Iniciar sesión con facebook</span>
+                <span> Iniciar sesión con facebook</span>
             </button>
-            <button onClick={logoutFacebook}>
-                Cerrar Sesión
-            </button>
+            
         </div>
         </div>
     </div>
@@ -41,6 +36,7 @@ const Login =( props ) => {
 
 const mapDispatchToProps = {
     setUser,
+    setLogin
 }
 
 export default connect(null, mapDispatchToProps)(Login);

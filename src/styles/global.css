@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f8fb;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #8c93bd;
 }
 .Header {
@@ -68,7 +68,7 @@ body {
   background-color: #3b5998;
   cursor: pointer;
 }
-.Header-fbLogin a{
+.Header-fbLogin a {
   color: #fff;
 }
 .NotFount {
@@ -92,6 +92,14 @@ body {
   grid-template-columns: minmax(auto, 640px);
   display: grid;
   justify-content: center;
+  background-color: #f4f8fb;;
+  border-radius: 10px;
+}
+.Login-content{
+  margin-bottom: 0.5em;
+}
+.Login-content h2{
+  margin-top: 3px;
 }
 .Login button {
   padding: 8px 12px;
@@ -104,7 +112,7 @@ body {
   margin: 0 auto;
 }
 .Login-btn i {
-  margin: 0 .5em 0 0;
+  margin: 0 0.5em 0 0;
   font-size: 20px;
 }
 .Dashboard {
@@ -130,7 +138,7 @@ body {
   object-fit: cover;
 }
 .Dashboard-profile-info h4 {
-  margin: 0 0 .5em 0;
+  margin: 0 0 0.5em 0;
 }
 .Dashboard-profile-info span {
   font-size: 14px;
@@ -171,13 +179,12 @@ body {
   background: #fff 50%;
   background-size: cover;
   border-radius: 5px;
-  box-shadow: 8px 14px 38px rgba(39,44,49,0.06), 1px 3px 8px rgba(39,44,49,0.03);
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+    1px 3px 8px rgba(39, 44, 49, 0.03);
   transition: all 0.5s ease;
   cursor: pointer;
 }
-.Pets a {
-  text-decoration: none;
-}
+
 .Pets-cover {
   min-height: 200px;
   background-repeat: no-repeat !important;
@@ -243,14 +250,14 @@ body {
   display: flex;
   align-items: center;
 }
-.Pets-item-info img{
+.Pets-item-info img {
   width: 28px;
   border-radius: 100%;
   object-fit: cover;
-  margin: 0 .5em 0 0;
+  margin: 0 0.5em 0 0;
 }
-.Pets-item-info i{
-  padding: 0 .4em;
+.Pets-item-info i {
+  padding: 0 0.4em;
 }
 .Pets-content {
   padding: 1em;
@@ -278,6 +285,7 @@ body {
   grid-template-columns: minmax(auto, 1024px);
   display: grid;
   justify-content: center;
+  margin: 2em 0; 
 }
 .PetInfo-content {
   display: grid;
@@ -289,7 +297,7 @@ body {
   align-items: center;
 }
 .PetInfo-name h2 {
-  margin: 0 .5em 0 0;
+  margin: 0 0.5em 0 0;
 }
 .PetInfo-name span {
   font-size: 20px;
@@ -300,10 +308,10 @@ body {
   height: auto;
 }
 .PetInfo-item h4 {
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 .PetInfo-item {
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 .PetInfo-item span {
   font-size: 16px;
@@ -314,7 +322,7 @@ body {
   color: #8c93bd;
 }
 .PetInfo-item i {
-  margin: 0 .5em 0 0;
+  margin: 0 0.5em 0 0;
 }
 .PetInfo-btn {
   width: 200px;
@@ -359,7 +367,7 @@ body {
   background-image: linear-gradient(45deg, #282758, #3d4aa2);
 }
 .Footer-social i {
-  margin: 0 .5em 0 0;
+  margin: 0 0.5em 0 0;
   font-size: 20px;
 }
 .Modal {
@@ -384,7 +392,7 @@ body {
   opacity: 1;
 }
 .Modal-overlay {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -407,7 +415,7 @@ body {
   justify-content: space-between;
 }
 .Form-head h2 {
-  margin: 0 0 .5em 0;
+  margin: 0 0 0.5em 0;
 }
 .Form-head i {
   font-size: 20px;
@@ -448,4 +456,10 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+}
+.Pets a {
+  text-decoration: none;
+}
+.none {
+  text-decoration: none;
 }

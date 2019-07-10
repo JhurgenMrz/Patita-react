@@ -1,6 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react';
+import Login from '../pages/Login';
+// import { connect } from 'http2';
+
+import { connect } from 'react-redux';
 
 const PetInfo = props =>{
+
+    const [adopt,setAdopt] = useState(false);
     return(
         <div className="PetInfo">
             <div className="PetInfo-container">
@@ -24,17 +30,27 @@ const PetInfo = props =>{
                         </p>
 
                         <div className="PetInfo-type">
-                            <button >Adoptar</button>
+                            <button className="PetInfo-btn"
+                            onClick={()=> setAdopt(!adopt)}
+                            >Adoptar</button>
                         </div>
 
                         <div className="PetInfo-profile-adopt">
+                        {adopt &&
+                            <div>
+                            {props.login ?
                             <div className="PetInfo-item">
-                                <h3>Datos de Contacto:</h3>
-                                <span>Dueño:</span>
-                                <h4>Jhurgen Maraza</h4>
-                                <span>Correo:</span>
-                                <h4>JhurgenMrz99@gmail.com </h4>
+                            <h3>Datos de Contacto:</h3>
+                            <span>Dueño:</span>
+                            <h4>{props.pet.userName}</h4>
+                            <span>Correo:</span>
+                            <h4>{props.pet.userContact}</h4>
                             </div>
+                            :
+                            <Login/>
+                            }
+                            </div>
+                        }
                         </div>
                         
                     </div>
@@ -45,4 +61,10 @@ const PetInfo = props =>{
     )
 }
 
-export default PetInfo;
+const mapStateToProps = state => {
+    return {
+        login: state.login,
+    };
+};
+
+export default connect(mapStateToProps)(PetInfo)

@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import { connect } from 'react-redux';
+import {auth} from '../utils/firebase'
+import {setUser, setLogin } from '../actions/index'
 import Layout from '../components/Layout'
 import '../styles/global.css';
 import NotFound from '../pages/NotFound'
@@ -8,7 +11,18 @@ import Login from '../pages/Login';
 import Dashboard from '../pages/Dashboard';
 import Pet from '../pages/Pet';
 
-const App = () => (
+const App = props => {
+
+  useEffect(()=>{
+    auth().onAuthStateChanged((user)=>{
+      if(user){
+        props.setUser(user);
+        props.setLogin(true);
+      }
+    })
+  }, [])
+
+  return (
   <BrowserRouter>
     <Layout>
         <Switch>
@@ -20,6 +34,11 @@ const App = () => (
         </Switch>
     </Layout>
   </BrowserRouter>
-);
+)};
 
-export default App;
+const mapDispatchToProps = {
+  setLogin,
+  setUser,
+}
+
+export default connect(null, mapDispatchToProps)(App);
