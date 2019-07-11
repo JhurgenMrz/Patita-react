@@ -16,10 +16,15 @@ const PetItem = props => {
             {props.pet.type === 'cat' && '🐱'}
 
       </span>
-      {props.pet.adop &&
+      {(props.pet.adopt == 'true' || props.pet.adopt == true)?
       <div className="Pets-type">
           Adopción
       </div>
+      :
+      <div className="Pets-type">
+          Cuidar
+      </div>
+      }
     }
     </div>
     <div className="Pets-content">
