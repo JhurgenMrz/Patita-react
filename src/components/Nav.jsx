@@ -7,19 +7,19 @@ const Nav = props => {
     const [active,setActive] = useState("");
 
     const handleMenu = (e)=>{
-        if(active == "is-active"){
+        if(active == "is-active animated lightSpeedIn"){
             return setActive("")
         }else{
-            return setActive("is-active");
+            return setActive("is-active animated lightSpeedIn");
         }
     }
 
 
 return(
     <div className="Nav">
-        <img onClick={handleMenu} id="menu-icon" src="https://res.cloudinary.com/jmaraza-com/image/upload/v1562893486/cecmdzmkxmoixqywlp5l.svg" alt=""/>
+        <img className="animated jackInTheBox 1s" onClick={handleMenu} id="menu-icon" src="https://res.cloudinary.com/jmaraza-com/image/upload/v1562893486/cecmdzmkxmoixqywlp5l.svg" alt=""/>
         
-        <div className={`Nav-container ${active}`} id="menu-burger">
+        <div className={`Nav-container ${active}  animated `} id="menu-burger">
         <ul>
             <li>
                 <Link onClick={handleMenu} to="/">Inicio</Link>

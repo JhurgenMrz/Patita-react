@@ -6,7 +6,7 @@ const PetItem = props => {
     const date = moment(props.pet.date, 'YYYYMMDD').fromNow();
     
     return (
-        <div className="Pets">
+        <div className="Pets animated bounceIn ">
     <div className="Pets-cover"
         style={{
             background: `url('${props.pet.photo})`}}

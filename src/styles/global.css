@@ -25,6 +25,7 @@ body {
 }
 .Header-logo {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -187,6 +188,7 @@ body {
     1px 3px 8px rgba(39, 44, 49, 0.03);
   transition: all 0.5s ease;
   cursor: pointer;
+  animation-duration: 700ms
 }
 
 .Pets-cover {
@@ -436,7 +438,7 @@ body {
 }
 .Form select {
   width: 100%;
-  height: 38px;
+  height: 39px;
   margin: 8px 0;
   display: inline-block;
   box-sizing: border-box;
@@ -473,6 +475,10 @@ body {
 }
 
 /* @Media queries */
+/*  */
+/*  */
+/*  */
+
 
 @media screen and (max-width: 1024px) {
   .Header h1 {
@@ -495,6 +501,7 @@ body {
   .Header{
     position: fixed;
     z-index: 4;
+    top: 0;
   }
   .Header-content{
     justify-content: center;
@@ -519,9 +526,10 @@ body {
     text-align: right;
     background: #3b5998;
     opacity: .9;
-    transition: .3s ease;
+    transition: 200ms ease;
   }
   .Nav-container.is-active{
+    animation-duration: 500ms;
     right: 0;
   }
 
@@ -564,6 +572,24 @@ body {
     margin: 2em 0;
     height: 4em;
   }
+
+  .PetInfo-container{
+    padding-top: 80px;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .PetInfo-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .Pets-cover{
+    min-height: 175px;
+  }
+  .Dashboard{
+    padding-top: 90px;
+    margin-top: 15px;
+  }
+
 }
 @media screen and (max-width: 425px) {
   /* .Header{
@@ -574,7 +600,14 @@ body {
     display: grid;
     grid-template-columns: 1fr;
   }
+  
+
+
+  
 }
 
 @media screen and (max-width: 375px) {
+  .Nav-container li{
+    font-size: 0.5em;
+  }
 }

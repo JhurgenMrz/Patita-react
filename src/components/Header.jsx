@@ -23,7 +23,9 @@ const Header = (props) => {
                     <Link to="/">
                     <img  src="https://res.cloudinary.com/jmaraza-com/image/upload/v1562809817/wwtvartpmpgok1qctjzg.svg" alt="Patitas" />
                     </Link>
+                    <Link to="/">
                     <h1>Patitas</h1>
+                    </Link>
                 </div>
                 <div className="Header-nav">
                     <Nav showModal={showModal}/>
