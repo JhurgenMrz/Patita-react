@@ -25,7 +25,7 @@ const PetItem = props => {
           Cuidar
       </div>
       }
-    }
+    
     </div>
     <div className="Pets-content">
       <div className="Pets-head">
