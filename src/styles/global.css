@@ -9,7 +9,7 @@ body {
   color: #8c93bd;
 }
 .Header {
-  padding: 0.5em;
+  padding: 7px;
   background-color: #fff;
   border-bottom: 1px solid #e5eff5;
 }
@@ -380,7 +380,7 @@ body {
   position: relative;
 }
 .Modal-wrapper {
-  transition: all 0.8s;
+  transition: all 0.7s;
   position: absolute;
   z-index: 8;
   display: grid;
@@ -415,6 +415,7 @@ body {
   display: block;
   width: 420px;
   position: relative;
+  border-radius: 2%;
 }
 .Form-head {
   display: flex;
@@ -495,6 +496,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  body{
+    margin-top: 90px;
+  }
   .Header h1{
     font-size: 1.8em;
   }
@@ -507,7 +511,7 @@ body {
     justify-content: center;
   }
   .Home{
-    padding: 90px 1em 2em 1em;
+    padding: 0.5em 1em 2em 1em;
   }
   .Home-container{
     margin-top: 5px;
@@ -574,7 +578,6 @@ body {
   }
 
   .PetInfo-container{
-    padding-top: 80px;
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -586,12 +589,15 @@ body {
     min-height: 175px;
   }
   .Dashboard{
-    padding-top: 90px;
     margin-top: 15px;
   }
 
+  /* .Login-container{
+    padding-top: 100px;
+  } */
+
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   /* .Header{
       display: none;
     } */
@@ -600,14 +606,57 @@ body {
     display: grid;
     grid-template-columns: 1fr;
   }
+  .Dashboard-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+  }
+  .Dashboard-profile{
+    grid-row: 1;
+  }
+  .Form{
+    width: 350px;
+    padding: 10px;
+  }
+  .Nav-container ul{
+    margin-top: 1em;
+    font-size: 2em;
+  }
   
 
 
   
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   .Nav-container li{
-    font-size: 0.5em;
+    font-size: 25px;
+  }
+  .Dashboard{
+    margin: 0;
+  }
+  .Form{
+    width: 100%;
+    padding: 0;
+  }
+  .Form-head{
+    justify-content: center;
+  }
+  .Form-item{
+    padding: 0 10px;
+  }
+  .Login{
+    padding: 0.5em;
+  }
+  .Login-content h2{
+    font-size: 20px;
+  }
+  .Login button{
+    width: 90%;
+  }
+  .Nav img{
+    width: 60px;
+    height: 60px;
   }
 }

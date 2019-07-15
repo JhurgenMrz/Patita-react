@@ -38,6 +38,10 @@ module.exports = {
   devServer:{
     historyApiFallback: true,
   },
+  
+  performance: {
+    hints: false
+  },
 
   plugins: [
     new HtmlWebPackPlugin({

@@ -47,7 +47,7 @@ const Form = props => {
   return (
     <div className="Form">
       <div className="Form-head">
-        <h2>Dar e Adopción</h2>
+        <h2>Dar en Adopción</h2>
       </div>
 
     {sendForm &&

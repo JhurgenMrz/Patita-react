@@ -18,7 +18,7 @@ const PetItem = props => {
       </span>
       {(props.pet.adopt == 'true' || props.pet.adopt == true)?
       <div className="Pets-type">
-          Adopción
+          Adoptar
       </div>
       :
       <div className="Pets-type">
